@@ -8,7 +8,7 @@ import ravin.enumeradores.Escolaridade;
 import ravin.enumeradores.EstadoCivil;
 
 public class Funcionario extends Pessoa {
-	
+	private String nome;
 	private String rg;
 	private EstadoCivil estadoCivil;
 	private Escolaridade escolaridade;
@@ -18,22 +18,23 @@ public class Funcionario extends Pessoa {
 	private Date dataDemissao;
 	private Disponibilidade disponibilidade;
 
-	
 	public Funcionario() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Funcionario(String rg, EstadoCivil estadoCivil, Escolaridade escolaridade, Cargo cargo, Date dataAdmissao,
-			Date dataDemissao, Disponibilidade disponibilidade, int pis) {
-		super();
+	public Funcionario(int id, String nome, String telefone, String endereco, String cpf, String observacao,
+			boolean ativo, Date dataNascimento, Date criadoEm, String criadoPor, Date alteradoEm, String alteradoPor,
+			String rg, EstadoCivil estadoCivil, Escolaridade escolaridade, Cargo cargo, int pis, Date dataAdmissao,
+			Date dataDemissao, Disponibilidade disponibilidade) {
+		super(nome);
 		this.rg = rg;
 		this.estadoCivil = estadoCivil;
 		this.escolaridade = escolaridade;
 		this.cargo = cargo;
+		this.pis = pis;
 		this.dataAdmissao = dataAdmissao;
 		this.dataDemissao = dataDemissao;
 		this.disponibilidade = disponibilidade;
-		this.pis = pis;
 	}
 
 	public String getRg() {
@@ -102,10 +103,9 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Funcionario [rg=" + rg + ", estadoCivil=" + estadoCivil + ", escolaridade=" + escolaridade + ", cargo="
-				+ cargo + ", pis=" + pis + ", dataAdmissao=" + dataAdmissao + ", dataDemissao=" + dataDemissao
-				+ ", disponibilidade=" + disponibilidade + "]";
+		return "Funcionario [nome" + super.getNome() + " \n rg=" + rg + " \n estadoCivil=" + estadoCivil
+				+ " \n escolaridade=" + escolaridade + " \n cargo=" + cargo + " \n pis=" + pis + " \n dataAdmissao="
+				+ dataAdmissao + " \n dataDemissao=" + dataDemissao + " \n disponibilidade=" + disponibilidade + "]";
 	}
-	
-	
+
 }

@@ -1,10 +1,10 @@
 package ravin.modelos;
 
-
 public class Cliente extends Pessoa {
 	private String alergias;
 	private boolean vip;
 	
+
 	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
@@ -23,7 +23,7 @@ public class Cliente extends Pessoa {
 		this.alergias = alergias;
 	}
 
-	public boolean isVip() {
+	public boolean isVip(boolean vip) {
 		return vip;
 	}
 
@@ -33,10 +33,8 @@ public class Cliente extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Cliente [alergias=" + alergias + ", vip=" + vip + " id " + super.getId() + "]";
+		return "Cliente [ id " + super.getId() + " Nome= " + super.getNome() + " alergias=" + alergias + ", vip=" + vip
+				+ "]";
 	}
 
-	
-	
-	
 }

@@ -15,13 +15,13 @@ public class FuncionarioRepository {
 
 	public void salvar(Funcionario entidade) {
 		Funcionario funcionario = buscarPorId(entidade.getId());
-		
-		if(funcionario == null) {
+
+		if (funcionario == null) {
 			funcionarios.add(entidade);
 		} else {
 			funcionario = entidade;
 		}
-		
+
 	}
 
 	public List<Funcionario> listarTodos() {
@@ -49,7 +49,7 @@ public class FuncionarioRepository {
 	public int contar() {
 		return funcionarios.size();
 	}
-	
+
 	public Funcionario buscarPorNome(String nome) {
 		return null;
 	}
