@@ -195,7 +195,13 @@ public class Main {
 		funcionarioAlterar.setCargo(Cargo.values()[Integer.parseInt(JOptionPane.showInputDialog(
 				"Digite o cargo do funcionário: \n 0 - Faxineiro \n 1 - Garçom \n 2 - Cozinheiro \n 3 - Gerente", funcionarioAlterar.getCargo().ordinal()))]);
 		funcionarioAlterar.setEscolaridade(Escolaridade.values()[Integer.parseInt(JOptionPane.showInputDialog(
-				"Digite a escolaridade do funcionario: \n 0 - Fundamental \n 1 - Médio \n 2 - Superior ", funcionarioAlterar.getEscolaridade().ordinal()))]);
+				"Digite a escolaridade do funcionario: \n 0 - Fundamental \n 1 - Médio \n 2 - Superior ", funcionarioAlterar.getEscolaridade().ordinal()
+				
+				
+				
+				
+				
+				))]);
 		funcionarioAlterar.setPis(Integer.parseInt(JOptionPane.showInputDialog("Digite o PIS do funcionário", funcionarioAlterar.getPis())));
 
 		return funcionarioAlterar;
